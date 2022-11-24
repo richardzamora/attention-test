@@ -36,7 +36,7 @@ class _PointElementState extends State<PointElement> {
 
   @override
   Widget build(BuildContext context) {
-    double size = 20;
+    double size = random.nextInt(50) + 5;
     return showElement
         ? Flash(
             controller: (controller) {
