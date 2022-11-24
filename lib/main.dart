@@ -74,12 +74,12 @@ class _MyHomePageState extends State<MyHomePage> {
       countDown = CounterWidget(time: time);
       showButton = false;
       setState(() {});
-      Timer counter = Timer.periodic(Duration(seconds: 1), (timer) {
+      Timer counter = Timer.periodic(const Duration(seconds: 1), (timer) {
         time--;
         countDown = CounterWidget(time: time);
         setState(() {});
       });
-      Future.delayed(Duration(seconds: 5)).then((value) {
+      Future.delayed(const Duration(seconds: 5)).then((value) {
         elements = [];
         counter.cancel();
         countDown = Container();
